@@ -1,0 +1,73 @@
+$Neon-Green: hsl(150, 100%, 66%);
+$Light-Cyan: hsl(193, 38%, 86%);
+$Dark-Blue: hsl(218, 23%, 16%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: $Dark-Blue;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  margin: 0;
+}
+
+.advice-card {
+  width: min(100%, 31.25rem);
+  background: $Dark-Grayish-Blue;
+  border-radius: 1rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  position: relative;
+
+  &__heading {
+    margin: 0 0 1.5rem;
+    color: $Neon-Green;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  &__quote {
+    color: $Light-Cyan;
+    font-size: calc(1.3rem + .6vw);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  &__divider {
+    display: block;
+    margin-bottom: 0.5rem;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__btn {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: -32.5px;
+    transform: translateX(-50%);
+    border: none;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: $Neon-Green;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: rgba($Neon-Green, 0.5) 0px 0px 29px 10px;
+    }
+  }
+}
+
+// font-size: 28px;
